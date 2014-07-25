@@ -25,6 +25,8 @@ module.exports = function(grunt) {
         "cloudReader": ['clean:cloudReader', 'copy:cloudReader', 'cssmin:cloudReader', 'requirejs:cloudReader'],
         "cloudReaderWithEpub": ['clean:cloudReader', 'copy:cloudReader', 'copy:cloudReaderEpubContent', 'cssmin:cloudReader', 'requirejs:cloudReader'],
 
-        "test": ['chromeApp', 'copy:prepareChromeAppTests', 'nodeunit:chromeApp']
+        "test": ['chromeApp', 'copy:prepareChromeAppTests', 'nodeunit:chromeApp'],
+
+        "epubReadingSystem": ['epubReadingSystem_readJSON', 'epubReadingSystem_processModules', 'epubReadingSystem_writeJSON']
     };
 };
